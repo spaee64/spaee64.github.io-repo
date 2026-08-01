@@ -1,4 +1,4 @@
-cd "/mnt/c/Users/spae64/Desktop/spae64 repo"
+cd "/mnt/c/Users/spae64/Desktop/spae64 repo" 2>/dev/null || cd ~/spaee64.github.io-repo
 
 cat > Release <<'EOF'
 Origin: spae64
@@ -14,10 +14,16 @@ EOF
 echo "Date: $(date -R)" >> Release
 
 echo "MD5Sum:" >> Release
-for f in Packages Packages.gz; do [ -f "$f" ] && echo " $(md5sum "$f" | cut -d' ' -f1) $(stat -c%s "$f") $f" >> Release; done
+for f in Packages Packages.gz; do 
+    [ -f "$f" ] && echo " $(md5sum "$f" | cut -d' ' -f1) $(wc -c < "$f") $f" >> Release
+done
 
 echo "SHA1:" >> Release
-for f in Packages Packages.gz; do [ -f "$f" ] && echo " $(sha1sum "$f" | cut -d' ' -f1) $(stat -c%s "$f") $f" >> Release; done
+for f in Packages Packages.gz; do 
+    [ -f "$f" ] && echo " $(sha1sum "$f" | cut -d' ' -f1) $(wc -c < "$f") $f" >> Release
+done
 
 echo "SHA256:" >> Release
-for f in Packages Packages.gz; do [ -f "$f" ] && echo " $(sha256sum "$f" | cut -d' ' -f1) $(stat -c%s "$f") $f" >> Release; done
+for f in Packages Packages.gz; do 
+    [ -f "$f" ] && echo " $(sha256sum "$f" | cut -d' ' -f1) $(wc -c < "$f") $f" >> Release
+done

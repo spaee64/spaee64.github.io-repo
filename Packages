@@ -1,0 +1,33 @@
+Package: org.xbmc.kodi
+Name: Kodi 21.3
+Version: 21.3
+Architecture: iphoneos-arm64
+Description: Media Center Kodi - Versao de 21.3MB
+Maintainer: org.xbmc.kodi
+Section: Multimedia
+Filename: https://githubusercontent.com
+Size: 22334669
+MD5sum: f9af8e1511ae927b384ab4f69040377f
+
+Package: org.xbmc.kodi
+Name: Kodi 18.9
+Version: 18.9
+Architecture: iphoneos-arm64
+Description: Media Center Kodi - Versao de 18.9MB
+Maintainer: org.xbmc.kodi
+Section: Multimedia
+Filename: https://githubusercontent.com
+Size: 19818086
+MD5sum: 3216b87e52cc9acfdf8b8f30fd18714a
+
+Package: org.xbmc.kodi
+Name: Kodi 17.6
+Version: 17.6
+Architecture: iphoneos-arm64
+Description: Media Center Kodi - Versao de 17.6MB
+Maintainer: org.xbmc.kodi
+Section: Multimedia
+Filename: https://githubusercontent.com
+Size: 18454938
+MD5sum: 0805fddc67505382c22ff369e983a5bb
+

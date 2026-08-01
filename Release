@@ -1,29 +1,18 @@
-cd "/mnt/c/Users/spae64/Desktop/spae64 repo" 2>/dev/null || cd ~/spaee64.github.io-repo
-
-cat > Release <<'EOF'
-Origin: spae64
-Label: spae64
+Origin: spaee64
+Label: spaee64
 Suite: stable
 Version: 1.0
-Codename: spae
+Codename: spaee
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
-Description: spae64 repo
-EOF
-
-echo "Date: $(date -R)" >> Release
-
-echo "MD5Sum:" >> Release
-for f in Packages Packages.gz; do 
-    [ -f "$f" ] && echo " $(md5sum "$f" | cut -d' ' -f1) $(wc -c < "$f") $f" >> Release
-done
-
-echo "SHA1:" >> Release
-for f in Packages Packages.gz; do 
-    [ -f "$f" ] && echo " $(sha1sum "$f" | cut -d' ' -f1) $(wc -c < "$f") $f" >> Release
-done
-
-echo "SHA256:" >> Release
-for f in Packages Packages.gz; do 
-    [ -f "$f" ] && echo " $(sha256sum "$f" | cut -d' ' -f1) $(wc -c < "$f") $f" >> Release
-done
+Description: spaee64 repo
+Date: Sat, 01 Aug 2026 11:46:41 -0300
+MD5Sum:
+ 0863e660f572203e14e65f9b75c749d0 1796 Packages
+ 9de1c4d45e80401eac0c83a3941152ef 731 Packages.gz
+SHA1:
+ 7d2c9923920c54400cd424de592f3a9980807497 1796 Packages
+ f83b7df8345214f769710c467714877118c6dad0 731 Packages.gz
+SHA256:
+ 1d04d2fbfc05db322f2c852634c659ff7e7c6afb4a5fa000e4c710ea18d2bd7c 1796 Packages
+ 6f4fabfca9e1d9780db80b2ddd59046ff108a929a799e217a189a87af5b42e25 731 Packages.gz
